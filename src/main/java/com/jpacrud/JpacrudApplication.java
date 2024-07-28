@@ -67,6 +67,9 @@ public class JpacrudApplication {
 //		User user4 = optional.get();
 //		userRepository.delete(user4);
 
+		// Custom Finder methods use
+		List<User> users = userRepository.findByName("RJ");
+		users.forEach(t -> System.out.println(t));
 	}
 
 }
